@@ -23,8 +23,11 @@ createDashBox <- function(title,
                           subvalue2 = NULL,
                           vartitle  = NULL,
                           varvalue  = NULL,
+                          graph     = c(65, 58, 92, 34, 67, 34, 56, 86),
                           width     = 3,
                           href      = NULL) {
+  gcolour <- function(x, y) ifelse(x >= y, "green", "orange")
+  gheight <- function(x) paste0("height: ", x, "%")
   boxContent <- tags$div(
     class   = "cw-container",
     checked = NA,
@@ -58,14 +61,38 @@ createDashBox <- function(title,
             checked = NA,
             tags$h4("Performance"),
             tags$ul(
-              tags$li(tags$span(class = "orange", style = "height: 70%")),
-              tags$li(tags$span(class = "orange", style = "height: 85%")),
-              tags$li(tags$span(class = "orange", style = "height: 40%")),
-              tags$li(tags$span(class = "green",  style = "height: 75%")),
-              tags$li(tags$span(class = "green",  style = "height: 50%")),
-              tags$li(tags$span(class = "green",  style = "height: 15%")),
-              tags$li(tags$span(class = "green",  style = "height: 25%")),
-              tags$li(tags$span(class = "orange", style = "height: 45%"))
+              tags$li(tags$span(
+                class = gcolour(graph[8], graph[1]),
+                style = gheight(graph[1])
+              )),
+              tags$li(tags$span(
+                class = gcolour(graph[8], graph[2]),
+                style = gheight(graph[2])
+              )),
+              tags$li(tags$span(
+                class = gcolour(graph[8], graph[3]),
+                style = gheight(graph[3])
+              )),
+              tags$li(tags$span(
+                class = gcolour(graph[8], graph[4]),
+                style = gheight(graph[4])
+              )),
+              tags$li(tags$span(
+                class = gcolour(graph[8], graph[5]),
+                style = gheight(graph[5])
+              )),
+              tags$li(tags$span(
+                class = gcolour(graph[8], graph[6]),
+                style = gheight(graph[6])
+              )),
+              tags$li(tags$span(
+                class = gcolour(graph[8], graph[7]),
+                style = gheight(graph[7])
+              )),
+              tags$li(tags$span(
+                class = gcolour(graph[8], graph[8]),
+                style = gheight(graph[8])
+              ))
             )
           ),
           tags$div(

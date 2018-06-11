@@ -1,6 +1,7 @@
 library(shiny)
 library(shinydashboard)
 source("dashBox.R")
+library(formattable)
 
 ui <- dashboardPage(
   dashboardHeader(title = "Amazing Dashboard"),
@@ -14,6 +15,15 @@ ui <- dashboardPage(
       uiOutput("dashKPI2"),
       uiOutput("dashKPI3"),
       uiOutput("dashKPI4")
+    ),
+    fluidRow(
+      column(width = 12,
+             tags$div(
+               class   = "cw-container",
+               style = "height: 600px;",
+               checked = NA,
+        formattableOutput("table"))
+      )
     )
   )
 )
