@@ -140,3 +140,58 @@ margin-bottom: 8px;
 .cw-yearly-change span em {
   color: rgba(255, 255, 255, 0.7);
 }
+
+
+
+
+/* CSS GRID CODE */
+
+.grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "gd-title gd-title gd-title gd-title gd-measure" "gd-trend gd-target-icon gd-target-kpi gd-var-icon gd-var-kpi";
+}
+
+.gd-title {
+  grid-area: gd-title;
+  background: #FAFAFA;
+border: 1px solid rgba(0,0,0,0.54);
+}
+
+.gd-measure {
+  grid-area: gd-measure;
+  background: #FAFAFA;
+border: 1px solid rgba(0,0,0,0.54);
+}
+
+.gd-trend {
+  grid-area: gd-trend;
+  background: #FAFAFA;
+border: 1px solid rgba(0,0,0,0.54);
+}
+
+.gd-target-icon {
+  grid-area: gd-target-icon;
+  background: #FAFAFA;
+border: 1px solid rgba(0,0,0,0.54);
+}
+
+.gd-target-kpi {
+  grid-area: gd-target-kpi;
+  background: #FAFAFA;
+border: 1px solid rgba(0,0,0,0.54);
+}
+
+.gd-var-icon {
+  grid-area: gd-var-icon;
+  background: #FAFAFA;
+border: 1px solid rgba(0,0,0,0.54);
+}
+
+.gd-var-kpi {
+  grid-area: gd-var-kpi;
+  background: #FAFAFA;
+border: 1px solid rgba(0,0,0,0.54);
+}

@@ -69,7 +69,8 @@ shinyServer(function(input, output) {
       vartitle  = "Variance",
       varvalue  = "Value",
       graph = sample(1:100, 8),
-      width = 3
+      width = 3,
+      href = 'www.google.com'
     )
   })
 
@@ -114,6 +115,12 @@ shinyServer(function(input, output) {
       vartitle  = "Variance",
       varvalue  = "Value",
       graph = sample(1:100, 8),
+      width = 3
+    )
+  })
+
+  output$kpiTile1  <- renderUI({
+    createKpiTile(
       width = 3
     )
   })

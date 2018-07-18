@@ -1,6 +1,7 @@
 library(shiny)
 library(shinydashboard)
 source("dashBox.R")
+source("kpiTile.R")
 library(formattable)
 
 ui <- dashboardPage(
@@ -11,7 +12,7 @@ ui <- dashboardPage(
       tags$link(rel = "stylesheet", type = "text/css", href = "style.css")
     ),
     fluidRow(
-      uiOutput("dashKPI1"),
+      uiOutput("kpiTile1"),
       uiOutput("dashKPI2"),
       uiOutput("dashKPI3"),
       uiOutput("dashKPI4")
