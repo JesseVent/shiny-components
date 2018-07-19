@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="36" viewBox="0 0 26 36">
+  <defs>
+    <polygon id="trendingup-copy-copy-copy-copy@3x-b" points="25 9.625 17 17.125 24 23.688 12 34 9 32.125 19 23.688 12 17.125 22 7.75 19 4 29 4 29 13.375"/>
+    <filter id="trendingup-copy-copy-copy-copy@3x-a" width="155%" height="136.7%" x="-27.5%" y="-11.7%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="1.5"/>
+      <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(-6 -3)">
+    <path fill="none" d="M19,0 C29.49275,0 38,8.5063 38,19 C38,29.49275 29.49275,38 19,38 C8.5063,38 0,29.4937 0,19 C0,8.5063 8.5063,0 19,0 L19,0 Z"/>
+    <use fill="#000" filter="url(#trendingup-copy-copy-copy-copy@3x-a)" xlink:href="#trendingup-copy-copy-copy-copy@3x-b"/>
+    <use fill="#43ABE6" fill-opacity=".2" xlink:href="#trendingup-copy-copy-copy-copy@3x-b"/>
+  </g>
+</svg>

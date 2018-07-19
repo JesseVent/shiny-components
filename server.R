@@ -120,10 +120,9 @@ shinyServer(function(input, output) {
   })
 
   output$kpiTile1  <- renderUI({
-    createKpiTile(
-      width = 3
-    )
+    createKpiTile()
   })
-
-
+  output$kpiTile2  <- renderUI({
+    createKpiTile()
+  })
 })

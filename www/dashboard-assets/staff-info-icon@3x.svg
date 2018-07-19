@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="53" height="51" viewBox="0 0 53 51">
+  <defs>
+    <rect id="staff-info-icon@3x-a" width="15.625" height="15.625" x=".781"/>
+    <rect id="staff-info-icon@3x-b" width="15.625" height="15.625" x="32.031"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(1)">
+    <path stroke="#43ABE6" stroke-dasharray="3 3 3 3" stroke-linecap="square" stroke-width="2" d="M8.59375 31.640625L8.59375 14.2940599M39.84375 31.640625L39.84375 14.2940599M16.40625 7.8125L33.59375 7.8125"/>
+    <circle cx="8.203" cy="39.453" r="8.203" fill="#FFF" stroke="#1F2C4D" stroke-width="2"/>
+    <use fill="#FFF" xlink:href="#staff-info-icon@3x-a"/>
+    <rect width="13.625" height="13.625" x="1.781" y="1" stroke="#1F2C4D" stroke-width="2"/>
+    <use fill="#FFF" xlink:href="#staff-info-icon@3x-b"/>
+    <rect width="13.625" height="13.625" x="33.031" y="1" stroke="#1F2C4D" stroke-width="2"/>
+    <polygon fill="#FFF" stroke="#43ABE6" stroke-width="2" points="40.234 29.688 50 39.453 40.234 49.219 30.469 39.453"/>
+  </g>
+</svg>

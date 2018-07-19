@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="70" viewBox="0 0 70 70">
+  <defs>
+    <circle id="interactions-icon@2x-a" cx="35" cy="35" r="35"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="interactions-icon@2x-b" fill="#fff">
+      <use xlink:href="#interactions-icon@2x-a"/>
+    </mask>
+    <use fill="#FFF" fill-opacity=".746" xlink:href="#interactions-icon@2x-a"/>
+    <g mask="url(#interactions-icon@2x-b)">
+      <g transform="translate(10 12)">
+        <path stroke="#26324D" stroke-width="2" d="M34,9 L28,20"/>
+        <path stroke="#26324D" stroke-dasharray="2.356 2.356" stroke-width="2" d="M16,0 L0,1" transform="translate(31 26)"/>
+        <path stroke="#26324D" stroke-width="2" d="M38,41 L29,32"/>
+        <path stroke="#26324D" stroke-dasharray="2.782 2.782" stroke-width="2" d="M9,1 L0,6" transform="translate(8 31)"/>
+        <g stroke-width="2" transform="translate(1)">
+          <path stroke="#26324D" d="M16.9,21 L16,20"/>
+          <path stroke="#26324D" stroke-dasharray="2.55 2.55" d="M15,19 L6,8"/>
+          <path stroke="#26324D" d="M5.8,8 L5,7"/>
+          <circle cx="22.5" cy="26.5" r="7.5" fill="#FFF" stroke="#26324D"/>
+          <circle cx="35.5" cy="4.5" r="4.5" fill="#FFF" stroke="#26324D"/>
+          <circle cx="3.5" cy="4.5" r="3.5" fill="#FFF" stroke="#43ABE6"/>
+        </g>
+        <circle cx="52.5" cy="25.5" r="3.5" fill="#FFF" stroke="#43ABE6" stroke-width="2"/>
+        <circle cx="40.5" cy="43.5" r="4.5" fill="#FFF" stroke="#26324D" stroke-width="2"/>
+        <circle cx="3.5" cy="39.5" r="3.5" fill="#FFF" stroke="#43ABE6" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

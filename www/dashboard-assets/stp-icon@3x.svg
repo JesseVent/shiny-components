@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="70" viewBox="0 0 70 70">
+  <defs>
+    <circle id="stp-icon@3x-a" cx="35" cy="35" r="35"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="stp-icon@3x-b" fill="#fff">
+      <use xlink:href="#stp-icon@3x-a"/>
+    </mask>
+    <use fill="#FFF" fill-opacity=".746" xlink:href="#stp-icon@3x-a"/>
+    <g stroke-width="2" mask="url(#stp-icon@3x-b)">
+      <g transform="translate(9 9)">
+        <circle cx="26" cy="26" r="26" stroke="#1F2C4D"/>
+        <polygon fill="#FFF" stroke="#43ABE6" points="27 35 16 41 18 29 10 21 21 19 26 9 32 19 43 21 35 29 37 41"/>
+      </g>
+    </g>
+  </g>
+</svg>
