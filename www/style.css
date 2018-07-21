@@ -21,7 +21,7 @@
 }
 .cw-info-value
 {
-    font-size: 32px;
+    font-size: 20px;
     font-weight: bold;
     margin-top: 8px;
     margin-bottom: 16px;
@@ -72,7 +72,7 @@
 }
 .cw-info-block dt
 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
 }
 .cw-info-block dd
@@ -141,7 +141,7 @@
 }
 .cw-yearly-change span
 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     line-height: 60px;
     display: block;
@@ -159,67 +159,95 @@
 {
     display: grid;
     height: 56px;
-    grid-gap: 0;
+    grid-gap: 2px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 'gd-title gd-title gd-title gd-title gd-measure' 'gd-trend gd-target-icon gd-target-kpi gd-var-icon gd-var-kpi';
 }
 .gd-title
 {
     font-family: Roboto-Regular;
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 20px;
+    line-height: 20px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding-left: 8px;
     letter-spacing: 0;
     color: rgba(0,0,0,.54);
-    border: 1px solid rgba(0,0,0,.54);
     grid-area: gd-title;
+    justify-self: left;
 }
 .gd-measure
 {
     font-family: Roboto-Regular;
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 20px;
+    line-height: 20px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding-right: 8px;
     text-align: right;
     color: rgba(0,0,0,.54);
-    border: 1px solid rgba(0,0,0,.54);
     grid-area: gd-measure;
+    justify-self: right;
 }
 .gd-trend
 {
-    border: 1px solid rgba(0,0,0,.54);
-    justify-self: center;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding-left: 8px;
     grid-area: gd-trend;
+    justify-self: left;
 }
 .gd-target-icon
 {
-    border: 1px solid rgba(0,0,0,.54);
-    justify-self: center;
+    font-size: 26px;
+    line-height: 26px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    color: rgba(0,0,0,.32);
     grid-area: gd-target-icon;
+    justify-self: center;
 }
 .gd-target-kpi
 {
-    font-family: Roboto-Light;
+    font-family: Roboto-Regular;
     font-size: 16px;
     line-height: 16px;
-    text-align: right;
-    color: rgba(0,0,0,.32);
-    border: 1px solid rgba(0,0,0,.54);
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding-right: 8px;
+    color: rgba(0,0,0,.48);
     grid-area: gd-target-kpi;
+    justify-self: right;
 }
 .gd-var-icon
 {
-    border: 1px solid rgba(0,0,0,.54);
-    justify-self: center;
+    font-size: 26px;
+    line-height: 26px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    color: rgba(0,0,0,.32);
     grid-area: gd-var-icon;
+    justify-self: center;
 }
 .gd-var-kpi
 {
-    font-family: Roboto-Light;
+    font-family: Roboto-Regular;
     font-size: 16px;
     line-height: 16px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding-right: 8px;
     text-align: right;
-    color: rgba(0,0,0,.32);
-    border: 1px solid rgba(0,0,0,.54);
+    color: rgba(0,0,0,.48);
     grid-area: gd-var-kpi;
+    justify-self: right;
 }
 /* KPI CONTAINER */
 .kpi-container
@@ -236,40 +264,45 @@
 .kpi-comp-icon
 {
     display: flex;
-    align-content: middle;
+    align-content: center;
     align-items: center;
-    grid-area: 1 / 1 / 1 / 1;
     justify-self: center;
+    grid-area: 1 / 1 / 1 / 1;
 }
 .kpi-comp-circle
 {
-    width: 35px;
-    height: 35px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
-    background: rgba(255,255,255,.75);
+    background: rgba(255,255,255,.70);
     justify-self: center;
 }
 .kpi-comp-title
 {
     font-family: Roboto-Medium;
-    font-size: 20px;
+    font-size: 24px;
     display: flex;
+    align-content: center;
     align-items: center;
     text-align: left;
-    vertical-align: middle;
     letter-spacing: 0;
     color: #fff;
+    justify-self: left;
     grid-area: 1 / 2 / 1 / 4;
 }
 .kpi-comp-chevron
 {
+    font-size: 26px;
     display: flex;
-    align-content: middle;
-    width: 26px;
-    height: 36px;
-    vertical-align: middle;
+    align-content: center;
+    align-items: center;
+    padding-right: 8px;
+    color: rgba(255,255,255,.70);
+    justify-self: right;
     grid-area: 1 / 4 / 1 / 4;
-    justify-self: center;
 }
 .kpi-comp-container
 {
@@ -280,10 +313,16 @@
 {
     font-family: Roboto-Regular;
     font-size: 16px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 48px;
+    padding-left: 8px;
     letter-spacing: 1px;
     color: #43abe6;
     background: rgba(67,171,230,.10);
     box-shadow: inset 0 0 2px 0 rgba(0,0,0,.24);
+    justify-self: left;
 }
 .kpi-comp-header
 {

@@ -14,15 +14,17 @@ createKpiTile <- function(title    = NULL,
                           measure  = NULL,
                           target   = NULL,
                           variance = NULL) {
-  kpiTile <- tags$div(
+  target   <- ifelse(is.null(target), target <- "TBD", target)
+  variance <- ifelse(is.null(variance), variance <- "TBD", variance)
+  kpiTile  <- tags$div(
     class            = "grid-container",
     checked          = NA,
     tags$div(class   = 'gd-title', title),
     tags$div(class   = 'gd-measure', measure),
-    tags$div(class   = 'gd-trend', "text"),
-    tags$div(class   = 'gd-target-icon', "text"),
+    tags$div(class   = 'gd-trend', tags$img(src="TrendingDown.png", height="20px", width = "20px")),
+    tags$div(class   = 'gd-target-icon',  icon("crosshairs", "fa-2x")),
     tags$div(class   = 'gd-target-kpi', target),
-    tags$div(class   = 'gd-var-icon', "text"),
+    tags$div(class   = 'gd-var-icon', icon("thermometer-full", "fa-2x")),
     tags$div(class   = 'gd-var-kpi', variance)
   )
 }

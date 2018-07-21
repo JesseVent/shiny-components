@@ -24,12 +24,18 @@ createKpiContainer <-
         class                   = "kpi-container",
         tags$div(class          = 'kpi-comp-header'),
         tags$div(class          = 'kpi-comp-icon',
-                 tags$div(class = 'kpi-comp-circle')),
-        tags$div(class          = 'kpi-comp-title',
-                 tags$h3(class  = 'kpi-comp-title-text', title)),
-        if (!is.null(href))
-          div(class             = "kpi-comp-chevron",
-              tags$img(src      = "Shape@1x.png")),
+                 tags$div(
+                   class = 'kpi-comp-circle',
+                   style = paste0(
+                     "background-image: url('",
+                     icon,
+                     "'); background-size: contain"
+                   )
+                 )),
+        tags$div(class          = 'kpi-comp-title', title),
+        #       if (!is.null(href))
+        div(class             = "kpi-comp-chevron",
+            icon("chevron-right", "fa-2x")),
         tags$div(class          = 'kpi-comp-container', ...)
       )
 
@@ -38,3 +44,13 @@ createKpiContainer <-
     div(class = if (!is.null(width))
       paste0("col-sm-", width), kpiContainer)
   }
+
+#' Create a KPI spacer to be used within a KPI container.
+#' KPi spacers can be used to break up the KPI tiles within a container.
+#'
+#' @param title Optional title.
+#' @export
+createKpiSpacer <- function(title = NULL) {
+  kpiSpacer <- tags$div(class = "kpi-comp-spacer", title)
+
+}

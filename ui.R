@@ -14,6 +14,7 @@ ui <- dashboardPage(
     ),
     fluidRow(
       createKpiContainer(title = "KPI Title",
+                         icon = "interactions-icon@3x.png",
                          uiOutput("kpiTile1"),
                          uiOutput("kpiTile2")
                          ),
