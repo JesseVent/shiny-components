@@ -120,9 +120,9 @@ shinyServer(function(input, output) {
   })
 
   output$kpiTile1  <- renderUI({
-    createKpiTile(title="Intervention", measure=2834, target = 1244, variance = 453)
+    createKpiTile(title="Intervention", measure=2834000, target = 124894, variance = 45993)
   })
   output$kpiTile2  <- renderUI({
-    createKpiTile(title="Intervention", measure=2834, target = 1244, variance = 453)
+    createKpiTile(title="Intervention", measure=283400, target = 124004, variance = 45399)
   })
 })
