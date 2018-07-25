@@ -11,6 +11,16 @@ library(shiny)
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
+
+  datatime <- data.frame(
+    id      = 1:4,
+    content = c("Item one", "Item two",
+                "Ranged item", "Item four"),
+    start   = c("2016-01-10", "2016-01-11",
+                "2016-01-20", "2016-02-14 15:00:00"),
+    end     = c(NA, NA, "2016-02-04", NA)
+  )
+
   df <- data.frame(
     id = 1:10,
     name = c(
@@ -124,5 +134,27 @@ shinyServer(function(input, output) {
   })
   output$kpiTile2  <- renderUI({
     createKpiTile(title="Intervention", measure=283400, target = 124004, variance = 45399)
+  })
+  output$kpiTile3  <- renderUI({
+    createKpiTile(title="Intervention", measure=2834000, target = 124894, variance = 45993)
+  })
+  output$kpiTile4  <- renderUI({
+    createKpiTile(title="Intervention", measure=283400, target = 124004, variance = 45399)
+  })
+
+  output$kpiTile5  <- renderUI({
+    createKpiTile(title="Intervention", measure=2834000, target = 124894, variance = 45993)
+  })
+  output$kpiTile6  <- renderUI({
+    createKpiTile(title="Intervention", measure=283400, target = 124004, variance = 45399)
+  })
+  output$kpiTile7  <- renderUI({
+    createKpiTile(title="Intervention", measure=2834000, target = 124894, variance = 45993)
+  })
+  output$kpiTile8  <- renderUI({
+    createKpiTile(title="Intervention", measure=283400, target = 124004, variance = 45399)
+  })
+  output$timelineVis <- renderTimevis({
+    timevis(datatime)
   })
 })
