@@ -29,7 +29,8 @@ mock_data <- function(x = "bitcoin") {
   df       <- as.data.frame(df)
 }
 
-# Calendar heatmap
+#' @title Calendar Heatmap
+#' @description A calendar heatmap is a great way to visualise daily data. Its structure makes it easy to detect weekly, monthly, or seasonal patterns.
 ggplot_calendar_heatmap(anomaly_df, "timestamp", "count", monthBorderSize = 1) +
   xlab(NULL) +
   ylab(NULL) +
@@ -37,7 +38,10 @@ ggplot_calendar_heatmap(anomaly_df, "timestamp", "count", monthBorderSize = 1) +
   facet_wrap( ~ Year, ncol = 1) +
   dash_theme()
 
-# Aesthetic boxplot with jitter
+#' @title Box plots with jitter
+#' @description A box and whisker displays a five-number summary of data and includes the minimum, first quartile, median, third quartile, and maximum values.
+#' .
+#' @note The dots are called 'jitter' as so the distribution are not stacked on top of each other misleading the user.
 base <- ggplot(df, aes(df[, 1], df[, 2])) +
   stat_boxplot(aes(fill = df[, 1]), alpha = .5) +
   geom_jitter(aes(color = df[, 1]), size = 3, alpha = .2) +

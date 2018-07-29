@@ -15,10 +15,10 @@
 #' @export
 createKpiContainer <-
   function(...,
-             title = NULL,
-             icon = NULL,
-             width = 3,
-             navtab = NULL) {
+           title = NULL,
+           icon = NULL,
+           width = 3,
+           navtab = NULL) {
     kpiContainer <-
       tags$div(
         class = "kpi-container",
@@ -35,17 +35,15 @@ createKpiContainer <-
           )
         ),
         tags$div(class = "kpi-comp-title", title),
-        if (!is.null(href)) {
+        if (!is.null(navtab)) {
           div(class = "kpi-comp-chevron", icon("chevron-right", "fa-2x"))
         } ,
         tags$div(class = "kpi-comp-container", ...)
       )
 
-    if (!is.null(href)) {
+    if (!is.null(navtab)) {
       kpiContainer <-
-        a(
-          href = href,
-          onclick = paste0("openTab('", navtab, "')"),
+        a(onclick = paste0("openTab('", navtab, "')"),
           href = "#",
           kpiContainer
         )
