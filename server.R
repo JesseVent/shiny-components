@@ -1,24 +1,15 @@
-#
-# This is the server logic of a Shiny web application. You can run the
-# application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
-
 library(shiny)
-
-# Define server logic required to draw a histogram
-shinyServer(function(input, output) {
-
+shinyServer(function(input, output, session) {
   datatime <- data.frame(
-    id      = 1:4,
-    content = c("Item one", "Item two",
-                "Ranged item", "Item four"),
-    start   = c("2016-01-10", "2016-01-11",
-                "2016-01-20", "2016-02-14 15:00:00"),
-    end     = c(NA, NA, "2016-02-04", NA)
+    id = 1:4,
+    content = c("Item one", "Item two", "Ranged item", "Item four"),
+    start = c(
+      "2016-01-10",
+      "2016-01-11",
+      "2016-01-20",
+      "2016-02-14 15:00:00"
+    ),
+    end = c(NA, NA, "2016-02-04", NA)
   )
 
   df <- data.frame(
@@ -68,93 +59,144 @@ shinyServer(function(input, output) {
     )
   })
 
-  output$dashKPI1  <- renderUI({
+  output$dashKPI1 <- renderUI({
     createDashBox(
       title = "Title Text",
-      value     = "Value",
-      subtitle1  = "Subtitle 1",
-      subvalue1  = "Valie",
-      subtitle2  = "Subtitle 2",
-      subvalue2  = "Value",
-      vartitle  = "Variance",
-      varvalue  = "Value",
+      value = "Value",
+      subtitle1 = "Subtitle 1",
+      subvalue1 = "Valie",
+      subtitle2 = "Subtitle 2",
+      subvalue2 = "Value",
+      vartitle = "Variance",
+      varvalue = "Value",
       graph = sample(1:100, 8),
       width = 3,
-      href = 'www.google.com'
+      href = "www.google.com"
     )
   })
 
-  output$dashKPI2  <- renderUI({
+  output$dashKPI2 <- renderUI({
     createDashBox(
       title = "Title Text",
-      value     = "Value",
-      subtitle1  = "Subtitle 1",
-      subvalue1  = "Valie",
-      subtitle2  = "Subtitle 2",
-      subvalue2  = "Value",
-      vartitle  = "Variance",
-      varvalue  = "Value",
+      value = "Value",
+      subtitle1 = "Subtitle 1",
+      subvalue1 = "Valie",
+      subtitle2 = "Subtitle 2",
+      subvalue2 = "Value",
+      vartitle = "Variance",
+      varvalue = "Value",
       graph = sample(1:100, 8),
       width = 3
     )
   })
 
-  output$dashKPI3  <- renderUI({
+  output$dashKPI3 <- renderUI({
     createDashBox(
       title = "Title Text",
-      value     = "Value",
-      subtitle1  = "Subtitle 1",
-      subvalue1  = "Valie",
-      subtitle2  = "Subtitle 2",
-      subvalue2  = "Value",
-      vartitle  = "Variance",
-      varvalue  = "Value",
+      value = "Value",
+      subtitle1 = "Subtitle 1",
+      subvalue1 = "Valie",
+      subtitle2 = "Subtitle 2",
+      subvalue2 = "Value",
+      vartitle = "Variance",
+      varvalue = "Value",
       graph = sample(1:100, 8),
       width = 3
     )
   })
 
-  output$dashKPI4  <- renderUI({
+  output$dashKPI4 <- renderUI({
     createDashBox(
       title = "Title Text",
-      value     = "Value",
-      subtitle1  = "Subtitle 1",
-      subvalue1  = "Valie",
-      subtitle2  = "Subtitle 2",
-      subvalue2  = "Value",
-      vartitle  = "Variance",
-      varvalue  = "Value",
+      value = "Value",
+      subtitle1 = "Subtitle 1",
+      subvalue1 = "Valie",
+      subtitle2 = "Subtitle 2",
+      subvalue2 = "Value",
+      vartitle = "Variance",
+      varvalue = "Value",
       graph = sample(1:100, 8),
       width = 3
     )
   })
 
-  output$kpiTile1  <- renderUI({
-    createKpiTile(title="Intervention", measure=2834000, target = 124894, variance = 45993)
+  output$kpiTile1 <- renderUI({
+    createKpiTile(
+      title = "Intervention",
+      measure = 2834000,
+      target = 124894,
+      variance = 45993
+    )
   })
-  output$kpiTile2  <- renderUI({
-    createKpiTile(title="Intervention", measure=283400, target = 124004, variance = 45399)
+  output$kpiTile2 <- renderUI({
+    createKpiTile(
+      title = "Intervention",
+      measure = 283400,
+      target = 124004,
+      variance = 45399
+    )
   })
-  output$kpiTile3  <- renderUI({
-    createKpiTile(title="Intervention", measure=2834000, target = 124894, variance = 45993)
+  output$kpiTile3 <- renderUI({
+    createKpiTile(
+      title = "Intervention",
+      measure = 2834000,
+      target = 124894,
+      variance = 45993
+    )
   })
-  output$kpiTile4  <- renderUI({
-    createKpiTile(title="Intervention", measure=283400, target = 124004, variance = 45399)
+  output$kpiTile4 <- renderUI({
+    createKpiTile(
+      title = "Intervention",
+      measure = 283400,
+      target = 124004,
+      variance = 45399
+    )
   })
 
-  output$kpiTile5  <- renderUI({
-    createKpiTile(title="Intervention", measure=2834000, target = 124894, variance = 45993)
+  output$kpiTile5 <- renderUI({
+    createKpiTile(
+      title = "Intervention",
+      measure = 2834000,
+      target = 124894,
+      variance = 45993
+    )
   })
-  output$kpiTile6  <- renderUI({
-    createKpiTile(title="Intervention", measure=283400, target = 124004, variance = 45399)
+  output$kpiTile6 <- renderUI({
+    createKpiTile(
+      title = "Intervention",
+      measure = 283400,
+      target = 124004,
+      variance = 45399
+    )
   })
-  output$kpiTile7  <- renderUI({
-    createKpiTile(title="Intervention", measure=2834000, target = 124894, variance = 45993)
+  output$kpiTile7 <- renderUI({
+    createKpiTile(
+      title = "Intervention",
+      measure = 2834000,
+      target = 124894,
+      variance = 45993
+    )
   })
-  output$kpiTile8  <- renderUI({
-    createKpiTile(title="Intervention", measure=283400, target = 124004, variance = 45399)
+  output$kpiTile8 <- renderUI({
+    createKpiTile(
+      title = "Intervention",
+      measure = 283400,
+      target = 124004,
+      variance = 45399
+    )
   })
   output$timelineVis <- renderTimevis({
     timevis(datatime)
   })
+
+  # start introjs when button is pressed with custom options and events
+  observeEvent(input$help,
+               introjs(
+                 session,
+                 options = list(
+                   "nextLabel" = "Next",
+                   "prevLabel" = "Previous",
+                   "skipLabel" = "Skip"
+                 )
+               ))
 })
