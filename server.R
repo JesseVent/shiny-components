@@ -122,7 +122,7 @@ shinyServer(function(input, output, session) {
 
   output$kpiTile1 <- renderUI({
     createKpiTile(
-      title = "Intervention",
+      title = "Interactions",
       measure = 2834000,
       target = 124894,
       variance = 45993
@@ -130,7 +130,7 @@ shinyServer(function(input, output, session) {
   })
   output$kpiTile2 <- renderUI({
     createKpiTile(
-      title = "Intervention",
+      title = "Interactions",
       measure = 283400,
       target = 124004,
       variance = 45399
@@ -138,7 +138,7 @@ shinyServer(function(input, output, session) {
   })
   output$kpiTile3 <- renderUI({
     createKpiTile(
-      title = "Intervention",
+      title = "Interactions",
       measure = 2834000,
       target = 124894,
       variance = 45993
@@ -146,7 +146,7 @@ shinyServer(function(input, output, session) {
   })
   output$kpiTile4 <- renderUI({
     createKpiTile(
-      title = "Intervention",
+      title = "Interactions",
       measure = 283400,
       target = 124004,
       variance = 45399
@@ -155,7 +155,7 @@ shinyServer(function(input, output, session) {
 
   output$kpiTile5 <- renderUI({
     createKpiTile(
-      title = "Intervention",
+      title = "Interactions",
       measure = 2834000,
       target = 124894,
       variance = 45993
@@ -163,7 +163,7 @@ shinyServer(function(input, output, session) {
   })
   output$kpiTile6 <- renderUI({
     createKpiTile(
-      title = "Intervention",
+      title = "Interactions",
       measure = 283400,
       target = 124004,
       variance = 45399
@@ -171,7 +171,7 @@ shinyServer(function(input, output, session) {
   })
   output$kpiTile7 <- renderUI({
     createKpiTile(
-      title = "Intervention",
+      title = "Interactions",
       measure = 2834000,
       target = 124894,
       variance = 45993
@@ -179,7 +179,7 @@ shinyServer(function(input, output, session) {
   })
   output$kpiTile8 <- renderUI({
     createKpiTile(
-      title = "Intervention",
+      title = "Interactions",
       measure = 283400,
       target = 124004,
       variance = 45399
@@ -188,6 +188,7 @@ shinyServer(function(input, output, session) {
   output$timelineVis <- renderTimevis({
     timevis(datatime)
   })
+
 
   # start introjs when button is pressed with custom options and events
   observeEvent(input$help,
