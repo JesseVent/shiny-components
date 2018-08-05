@@ -2,6 +2,7 @@ library(shiny)
 library(shinydashboard)
 source("dashBox.R")
 source("kpiTile.R")
+source("husky.R")
 source("kpiContainer.R")
 library(formattable)
 library(timevis)
@@ -20,13 +21,17 @@ ui <- dashboardPage(
     data.step = 1,
     data.intro = "These link to the different pages."
     ),
-    actionButton("help", "Dashboard Guide")
+    actionButton("help", "Dashboard Guide"),
+    tags$div(class="huskyspacer"),
+    tags$div(class="huskydiv",
+             createHusky())
   ),
   dashboardBody(
     introjsUI(),
     tags$script(HTML("var openTab = function(tabName){ $('a', $('.sidebar')).each(function() {if(this.getAttribute('data-value') == tabName) { this.click()};});}")),
     tags$head(
-      tags$link(rel = "stylesheet", type = "text/css", href = "style.css")
+      tags$link(rel = "stylesheet", type = "text/css", href = "style.css"),
+      tags$link(rel = "stylesheet", type = "text/css", href = "husky.css")
     ),
     tabItems(
       # DASHBOARD TAB

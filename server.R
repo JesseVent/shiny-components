@@ -189,6 +189,7 @@ shinyServer(function(input, output, session) {
     timevis(datatime)
   })
 
+
   # start introjs when button is pressed with custom options and events
   observeEvent(input$help,
                introjs(
