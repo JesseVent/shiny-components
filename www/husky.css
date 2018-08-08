@@ -1468,10 +1468,8 @@
 }
 
 .husky {
-  -webkit-animation: squiggly-anim 0.3s infinite;
-          animation: squiggly-anim 0.3s infinite;
-  height: 20vmin;
-  width: 28vmin;
+  height: 100%;
+  width: 100%;
 }
 @media screen and (max-width: 400px) {
   .husky {
@@ -1481,9 +1479,9 @@
 }
 .husky:before {
   width: 90%;
-  height: 0.5vmin;
+  height: 1.5vmin;
   background: #30508F;
-  border-radius: 0.5vmin;
+  border-radius: 1.5vmin;
   top: 100%;
   left: 5%;
   z-index: 2;
@@ -1491,7 +1489,7 @@
 .husky:after {
   width: 100%;
   height: 10%;
-  top: calc(100% + 0.5vmin);
+  top: calc(100% + 1.5vmin);
   z-index: 3;
   background: #4F8EDB;
 }
@@ -1623,7 +1621,7 @@ div:before, div:after {
 .ear:before {
   width: 70%;
   height: 55%;
-  border: 2px solid #30508F;
+  border: 1px solid #30508F;
   background: #DE6465;
   top: 20%;
   left: 15%;
@@ -1661,6 +1659,7 @@ div:before, div:after {
 }
 
 .mouth {
+      line-height: initial;
   z-index: 1;
   -webkit-animation: mouth 12s none infinite;
           animation: mouth 12s none infinite;
@@ -1699,9 +1698,9 @@ div:before, div:after {
 }
 .lips:before, .lips:after {
   background: white;
-  width: calc(50% + 1.5px);
+  width: calc(50% + 0.5px);
   border-color: #9EB6D7;
-  border-width: 3px;
+  border-width: 2px;
   border-style: solid;
   height: 100%;
   border-bottom-left-radius: 65% 100%;
@@ -1835,7 +1834,7 @@ div:before, div:after {
   background: transparent;
   bottom: 0;
   left: 47%;
-  box-shadow: -1.3vmin 0 0 #9EB6D7, -2.8vmin 0 0 #9EB6D7, 1.3vmin 0 0 #4F8EDB, 2.8vmin 0 0 #4F8EDB;
+  box-shadow: -1.3vmin 0 0 #9EB6D7, -2.8vmin 0 0 #9EB6D7, 1.3vmin 0 0 #4F8EDB, inset 2.8vmin 0 0 #4F8EDB;
   z-index: 2;
 }
 .front-legs > .leg {
@@ -1896,7 +1895,7 @@ div:before, div:after {
   -webkit-animation: tail 12s none infinite;
           animation: tail 12s none infinite;
   height: 100%;
-  width: 4vmin;
+  width: 2vmin;
   right: 26%;
   -webkit-transform-origin: center right;
           transform-origin: center right;
@@ -1914,22 +1913,22 @@ div:before, div:after {
 }
 .husky > .tail > .tail {
   right: 88%;
-  overflow: hidden;
 }
 
-.huskyspacer{
-  height: 395px;
+.huskybutton {
+   align-self: center;
+  height: 12vmin;
+ margin-top:auto;
+ order: 2;
+ flex-direction: column;
 }
-.huskydiv{
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
+.huskydiv {
+  align-self: center;
+  height: 15vmin;
+  width: 21vmin;
+ /* margin-top:auto; */
+ order: 3;
+ /* flex-grow: 1; */
 
 }
 
@@ -1937,3 +1936,42 @@ div:before, div:after {
   box-sizing: border-box;
   position: relative;
 }
+
+#sidebarItemExpanded {
+  align-items: initial;
+  justify-content: center;
+  display: flex;
+  min-height: 92vh;
+  flex-direction: column;
+    background-color: #1f282f;
+}
+
+.main-sidebar {
+      background-color: #1f282f;
+}
+#help {
+    align-self: center;
+  background: #fff;
+  color: #333;
+  display: inline-block;
+	font-size: 14px;
+  line-height: 4em;
+  margin-bottom: 1em;
+	padding: 0 1em;
+	position: relative;
+	text-align: center;
+	vertical-align: top;
+		min-width: 7em;
+}
+#help:after {
+	border: 1em solid transparent;
+	border-top-color: #fff;
+	content: '';
+	margin-left: -1em;
+	position: absolute;
+		top: 100%;
+		left: 50%;
+	width: 0;
+	height: 0;
+}
+

@@ -21,10 +21,12 @@ ui <- dashboardPage(
     data.step = 1,
     data.intro = "These link to the different pages."
     ),
-    actionButton("help", "Dashboard Guide"),
-    tags$div(class="huskyspacer"),
     tags$div(class="huskydiv",
-             createHusky())
+             createHusky()
+             ),
+    tags$div(class="huskybutton",
+             actionButton("help", "Dashboard Guide"))
+
   ),
   dashboardBody(
     introjsUI(),
